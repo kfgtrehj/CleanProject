@@ -41,6 +41,7 @@ public class SunfoApiClient {
     private static Converter.Factory mfactory = GsonConverterFactory.create();
     private Retrofit mRetrofit = null;
 
+
     public SunfoApiClient(Context context, String url){
         this(context,url,mfactory);
     }
@@ -51,6 +52,7 @@ public class SunfoApiClient {
         mfactory = factory;
         initRetrofit();
     }
+
     private void initRetrofit() {
         if (mRetrofit==null){
             mRetrofit = new Retrofit.Builder()
